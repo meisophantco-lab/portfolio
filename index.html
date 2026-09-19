@@ -1,69 +1,1231 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Template</title>
-<style>
-  body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
-  section { padding: 60px 20px; }
-  header { background: #4CAF50; color: white; text-align: center; padding: 100px 20px; }
-  header h1 { margin: 0; font-size: 3em; }
-  header p { font-size: 1.2em; }
-  header a { display: inline-block; margin-top: 20px; padding: 10px 20px; background: white; color: #4CAF50; text-decoration: none; font-weight: bold; border-radius: 5px; }#about { background: #f4f4f4; text-align: center; } #about img { width: 150px; border-radius: 50%; margin-bottom: 20px; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#projects { text-align: center; } .project { display: inline-block; width: 300px; margin: 20px; vertical-align: top; } .project img { width: 100%; border-radius: 10px; }
+  <title>Meisophant | Building What Comes Next</title>
 
-#skills { background: #f4f4f4; text-align: center; } .skills-list { display: flex; justify-content: center; flex-wrap: wrap; } .skills-list div { margin: 10px 20px; padding: 10px 20px; background: #4CAF50; color: white; border-radius: 5px; }
+  <meta
+    name="description"
+    content="Meisophant is building technology, products, and digital solutions designed to solve real problems and create new possibilities."
+  >
 
-#contact { text-align: center; } #contact form { max-width: 400px; margin: auto; display: flex; flex-direction: column; } #contact input, #contact textarea { margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; } #contact button { padding: 10px; border: none; border-radius: 5px; background: #4CAF50; color: white; font-size: 1em; cursor: pointer; }
+  <meta name="theme-color" content="#000000">
 
-footer { background: #333; color: white; text-align: center; padding: 20px; } </style>
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body><header>
-  <h1>Jane Doe</h1>
-  <p>Frontend Developer | Designer | Freelancer</p>
-  <a href="#contact">Hire Me</a>
-</header><section id="about">
-  <h2>About Me</h2>
-  <img src="https://via.placeholder.com/150" alt="Profile Picture">
-  <p>Hello! I'm Jane, a passionate web developer who loves creating beautiful and functional websites. I specialize in HTML, CSS, JavaScript, and responsive design.</p>
-</section><section id="projects">
-  <h2>Projects</h2>
-  <div class="project">
-    <img src="https://via.placeholder.com/300x200" alt="Project 1">
-    <h3>Project One</h3>
-    <p>A modern portfolio website for a freelancer.</p>
-  </div>
-  <div class="project">
-    <img src="https://via.placeholder.com/300x200" alt="Project 2">
-    <h3>Project Two</h3>
-    <p>Landing page for a small business campaign.</p>
-  </div>
-  <div class="project">
-    <img src="https://via.placeholder.com/300x200" alt="Project 3">
-    <h3>Project Three</h3>
-    <p>E-commerce prototype for a retail store.</p>
-  </div>
-</section><section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-list">
-    <div>HTML</div>
-    <div>CSS</div>
-    <div>JavaScript</div>
-    <div>React</div>
-    <div>Figma</div>
-  </div>
-</section><section id="contact">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section><footer>
-  <p>Connect with me on <a href="#" style="color:#4CAF50; text-decoration:none;">LinkedIn</a> | <a href="#" style="color:#4CAF50; text-decoration:none;">GitHub</a></p>
-  <p>&copy; 2026 Jane Doe</p>
-</footer></body>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="#" class="brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#impact">Impact</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact" class="nav-cta">Partner With Us</a>
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          A MEISOPHANT COMPANY
+        </div>
+
+        <h1>
+          Building
+          <span>What Comes Next.</span>
+        </h1>
+
+        <p class="hero-description">
+          Meisophant is building technology, products, and digital solutions
+          designed to solve real problems and create new possibilities.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#ventures" class="btn btn-primary">
+            Explore Our Work
+            <span>↗</span>
+          </a>
+
+          <a href="#vision" class="btn btn-ghost">
+            Our Vision
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="hero-orbit">
+
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="orbit-ring ring-three"></div>
+
+        <div class="orbit-core">
+          <span>M</span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="section intro" id="about">
+
+      <div class="section-label">
+        <span>01</span>
+        WHO WE ARE
+      </div>
+
+      <div class="intro-grid">
+
+        <h2>
+          Not just building
+          <span>products.</span>
+        </h2>
+
+        <div class="intro-copy">
+
+          <p>
+            Meisophant is a technology-driven company focused on turning
+            ambitious ideas into useful products, platforms, and experiences.
+          </p>
+
+          <p>
+            We believe the future belongs to people willing to build it.
+            So we experiment, create, learn, and turn possibilities into
+            something real.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VENTURES
+    ========================== -->
+
+    <section class="section ventures" id="ventures">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          <span>02</span>
+          WHAT WE'RE BUILDING
+        </div>
+
+        <h2>
+          Ideas become
+          <span>reality.</span>
+        </h2>
+
+        <p>
+          A growing ecosystem of products and initiatives built under
+          the Meisophant name.
+        </p>
+
+      </div>
+
+
+      <div class="venture-grid">
+
+        <article class="venture-card featured">
+
+          <div class="card-number">01</div>
+
+          <div class="card-content">
+
+            <div class="card-tag">PROCUREMENT · MARKETPLACE</div>
+
+            <h3>ProcuLocal</h3>
+
+            <p>
+              A procurement platform connecting businesses with
+              opportunities, vendors, and better ways to source.
+            </p>
+
+            <a href="https://proculocal.name.ng/" target="_blank" rel="noopener">
+              Visit ProcuLocal <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="venture-card">
+
+          <div class="card-number">02</div>
+
+          <div class="card-content">
+
+            <div class="card-tag">EDUCATION · TECHNOLOGY</div>
+
+            <h3>TekSpot</h3>
+
+            <p>
+              Making technology education more accessible by helping
+              people learn, explore, and build.
+            </p>
+
+            <a href="https://tekspot.meisophant.name.ng/" target="_blank" rel="noopener">
+              Explore TekSpot <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="venture-card coming-soon">
+
+          <div class="card-number">03</div>
+
+          <div class="card-content">
+
+            <div class="card-tag">FUTURE TECHNOLOGY</div>
+
+            <h3>More to Come</h3>
+
+            <p>
+              New products, technologies, and companies are already
+              being imagined inside the Meisophant ecosystem.
+            </p>
+
+            <span class="coming-label">
+              IN DEVELOPMENT
+            </span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPACT
+    ========================== -->
+
+    <section class="section impact" id="impact">
+
+      <div class="impact-header">
+
+        <div class="section-label">
+          <span>03</span>
+          PROGRESS
+        </div>
+
+        <h2>
+          We measure what
+          <span>we build.</span>
+        </h2>
+
+        <p>
+          This is where our ideas become evidence. As Meisophant grows,
+          we'll document the people reached, products launched,
+          partnerships formed, and milestones achieved.
+        </p>
+
+      </div>
+
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <strong>02</strong>
+          <span>Active Initiatives</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>01</strong>
+          <span>Growing Ecosystem</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>∞</strong>
+          <span>Ideas to Explore</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>01</strong>
+          <span>Vision</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VISION
+    ========================== -->
+
+    <section class="section vision" id="vision">
+
+      <div class="vision-content">
+
+        <div class="section-label">
+          <span>04</span>
+          THE LONG VIEW
+        </div>
+
+        <h2>
+          Today we build.
+          <br>
+          <span>Tomorrow we transform.</span>
+        </h2>
+
+        <p>
+          Meisophant is being built with a long-term vision:
+          a technology ecosystem where ambitious ideas can become
+          independent products, companies, and solutions.
+        </p>
+
+        <div class="vision-line">
+          <span>IDEA</span>
+          <i></i>
+          <span>PRODUCT</span>
+          <i></i>
+          <span>COMPANY</span>
+          <i></i>
+          <span>IMPACT</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="section contact" id="contact">
+
+      <div class="contact-box">
+
+        <div class="section-label">
+          <span>05</span>
+          LET'S BUILD
+        </div>
+
+        <h2>
+          Something worth
+          <span>being part of.</span>
+        </h2>
+
+        <p>
+          We're building for the long term. If you're interested in
+          partnerships, technology, or the future of Meisophant,
+          we'd like to hear from you.
+        </p>
+
+        <a
+          href="mailto:info@meisophant.name.ng"
+          class="btn btn-primary"
+        >
+          Start a Conversation
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="#" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#impact">Impact</a>
+        <a href="#vision">Vision</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
 </html>
+
+"style.css"
+
+:::writing{variant="document" id="74106" title="Meisophant Portfolio — Stylesheet"}
+
+:root {
+  --black: #050505;
+  --black-soft: #0a0a0c;
+  --white: #f5f3f8;
+  --muted: #9d9aa5;
+
+  --purple: mediumpurple;
+  --purple-light: #b899ff;
+  --purple-dark: #6b46b8;
+
+  --border: rgba(147, 112, 219, 0.18);
+  --glass: rgba(255, 255, 255, 0.035);
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+#gridCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  opacity: 0.3;
+}
+
+.ambient {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: -4;
+  opacity: 0.08;
+}
+
+.ambient-one {
+  background: var(--purple);
+  top: -250px;
+  right: -150px;
+}
+
+.ambient-two {
+  background: var(--purple-light);
+  bottom: -300px;
+  left: -200px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 22px 5%;
+  backdrop-filter: blur(18px);
+  background: rgba(5, 5, 5, 0.68);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.navbar {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(147, 112, 219, 0.7);
+  color: var(--purple-light);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #aaa7b1;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links .nav-cta {
+  color: white;
+  border: 1px solid var(--border);
+  padding: 11px 17px;
+  background: rgba(147,112,219,0.07);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+  padding: 150px 5% 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow,
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--purple-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+  box-shadow: 0 0 18px var(--purple);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  margin: 28px 0;
+}
+
+.hero h1 span,
+h2 span {
+  color: var(--purple);
+}
+
+.hero-description {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: #080609;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(147,112,219,0.25);
+}
+
+.btn-ghost {
+  border: 1px solid var(--border);
+  color: #d0ccd6;
+}
+
+.btn-ghost:hover {
+  border-color: var(--purple);
+}
+
+
+/* =========================
+   ORBIT
+========================= */
+
+.hero-orbit {
+  width: 360px;
+  height: 360px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(147,112,219,0.16);
+  border-radius: 50%;
+}
+
+.ring-one {
+  transform: rotateX(65deg);
+}
+
+.ring-two {
+  transform: rotateY(65deg);
+}
+
+.ring-three {
+  transform: rotate(45deg) scale(0.7);
+}
+
+.orbit-core {
+  position: absolute;
+  inset: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(147,112,219,0.3),
+    rgba(5,5,5,0.9) 70%
+  );
+
+  border: 1px solid rgba(147,112,219,0.5);
+  box-shadow:
+    0 0 70px rgba(147,112,219,0.15),
+    inset 0 0 40px rgba(147,112,219,0.1);
+}
+
+.orbit-core span {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--purple-light);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 5%;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #66636c;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+.scroll-line {
+  width: 60px;
+  height: 1px;
+  background: var(--purple);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 130px 5%;
+}
+
+.section-label span {
+  color: #6f6a76;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  margin-top: 55px;
+}
+
+.intro h2,
+.section-heading h2,
+.impact h2,
+.vision h2,
+.contact h2 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.intro-copy {
+  padding-top: 10px;
+}
+
+.intro-copy p,
+.section-heading p,
+.impact-header p,
+.vision-content > p,
+.contact p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   VENTURES
+========================= */
+
+.section-heading {
+  max-width: 800px;
+}
+
+.section-heading h2 {
+  margin: 25px 0;
+}
+
+.venture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 60px;
+}
+
+.venture-card {
+  min-height: 360px;
+  padding: 32px;
+
+  position: relative;
+
+  border: 1px solid var(--border);
+  background: var(--glass);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.4s ease;
+}
+
+.venture-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(147,112,219,0.45);
+}
+
+.venture-card.featured {
+  grid-row: span 2;
+  min-height: 740px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(147,112,219,0.13),
+      rgba(255,255,255,0.015)
+    );
+}
+
+.card-number {
+  color: #55515b;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.card-tag {
+  color: var(--purple-light);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  margin-bottom: 18px;
+}
+
+.card-content h3 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  max-width: 500px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.card-content a {
+  font-size: 13px;
+  color: var(--purple-light);
+}
+
+.coming-label {
+  color: #66636c;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   IMPACT
+========================= */
+
+.impact-header {
+  max-width: 850px;
+}
+
+.impact h2 {
+  margin: 25px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 65px;
+  background: var(--border);
+}
+
+.stat-card {
+  padding: 40px 30px;
+  background: var(--black);
+}
+
+.stat-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 55px;
+  color: var(--purple-light);
+  margin-bottom: 10px;
+}
+
+.stat-card span {
+  color: #77737d;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   VISION
+========================= */
+
+.vision {
+  text-align: center;
+}
+
+.vision-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.vision-content .section-label {
+  justify-content: center;
+}
+
+.vision h2 {
+  margin: 35px 0;
+}
+
+.vision-content > p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.vision-line {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  color: #77737d;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.vision-line i {
+  width: 50px;
+  height: 1px;
+  background: var(--purple);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+  border: 1px solid var(--border);
+  padding: 90px 8%;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(147,112,219,0.09),
+      transparent 65%
+    );
+}
+
+.contact-box .section-label {
+  justify-content: center;
+}
+
+.contact h2 {
+  margin: 30px auto;
+  max-width: 850px;
+}
+
+.contact p {
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 5% 25px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-brand p {
+  color: #69656e;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #77737d;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  margin-top: 70px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #55515b;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    position: absolute;
+    top: 78px;
+    left: 5%;
+    right: 5%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 20px;
+
+    background: rgba(10,10,12,0.96);
+    border: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 1px;
+    background: white;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+
+  .hero-orbit {
+    width: 260px;
+    height: 260px;
+    margin: 80px auto 20px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .venture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venture-card.featured {
+    grid-row: auto;
+    min-height: 450px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vision-line {
+    flex-wrap: wrap;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .site-header {
+    padding: 18px 5%;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .section {
+    padding: 90px 5%;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .impact h2,
+  .vision h2,
+  .contact h2 {
+    font-size: 3rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 60px 25px;
+  }
+
+}
