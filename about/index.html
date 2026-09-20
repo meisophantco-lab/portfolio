@@ -1,1 +1,912 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About | Meisophant</title>
+
+  <meta
+    name="description"
+    content="Learn about Meisophant, a technology-driven company building products, platforms, and digital solutions for the future."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    /* =========================
+       ABOUT PAGE
+    ========================== */
+
+    .about-hero {
+      min-height: 78vh;
+      max-width: 1400px;
+      margin: auto;
+      padding: 160px 5% 100px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-hero h1 {
+      max-width: 1050px;
+      margin-top: 28px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+    }
+
+    .about-hero h1 span {
+      color: var(--purple);
+    }
+
+    .about-intro {
+      max-width: 650px;
+      margin-top: 40px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       STORY
+    ========================== */
+
+    .about-story {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+      margin-top: 60px;
+    }
+
+    .about-story-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .about-story-title span {
+      color: var(--purple);
+    }
+
+    .about-story-content p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+
+
+    /* =========================
+       MISSION
+    ========================== */
+
+    .mission-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .mission-box {
+      padding: 80px 8%;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(147,112,219,0.13),
+          transparent 40%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .mission-box h2 {
+      max-width: 1000px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .mission-box h2 span {
+      color: var(--purple);
+    }
+
+    .mission-box p {
+      max-width: 720px;
+      margin-top: 35px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       PRINCIPLES
+    ========================== */
+
+    .principles-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .principles-heading {
+      max-width: 750px;
+    }
+
+    .principles-heading h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .principles-heading h2 span {
+      color: var(--purple);
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      margin-top: 65px;
+
+      background: var(--border);
+    }
+
+    .principle-card {
+      min-height: 300px;
+      padding: 35px;
+
+      background: var(--black);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.4s ease;
+    }
+
+    .principle-card:hover {
+      background: rgba(147,112,219,0.045);
+    }
+
+    .principle-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+    .principle-card h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .principle-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ECOSYSTEM
+    ========================== */
+
+    .ecosystem-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+      text-align: center;
+    }
+
+    .ecosystem-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .ecosystem-content .section-label {
+      justify-content: center;
+    }
+
+    .ecosystem-content h2 {
+      margin-top: 28px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .ecosystem-content h2 span {
+      color: var(--purple);
+    }
+
+    .ecosystem-content > p {
+      max-width: 680px;
+      margin: 30px auto 0;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .ecosystem-flow {
+      margin-top: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .ecosystem-node {
+      padding: 14px 20px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.025);
+
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .ecosystem-arrow {
+      color: var(--purple);
+      font-size: 20px;
+    }
+
+
+    /* =========================
+       FOUNDER / HUMAN ELEMENT
+    ========================== */
+
+    .founder-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .founder-content h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .founder-content h2 span {
+      color: var(--purple);
+    }
+
+    .founder-content p {
+      max-width: 600px;
+      margin-top: 30px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .founder-card {
+      min-height: 420px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(147,112,219,0.12),
+          transparent 65%
+        );
+    }
+
+    .founder-symbol {
+      width: 170px;
+      height: 170px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+      border: 1px solid rgba(147,112,219,0.4);
+
+      box-shadow:
+        0 0 80px rgba(147,112,219,0.12),
+        inset 0 0 50px rgba(147,112,219,0.08);
+
+      font-family: var(--font-display);
+      font-size: 70px;
+      font-weight: 800;
+      color: var(--purple-light);
+    }
+
+
+    /* =========================
+       ABOUT CTA
+    ========================== */
+
+    .about-cta {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .about-cta-box {
+      padding: 90px 8%;
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,112,219,0.1),
+          transparent 65%
+        );
+    }
+
+    .about-cta-box h2 {
+      max-width: 850px;
+      margin: 25px auto 30px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .about-cta-box h2 span {
+      color: var(--purple);
+    }
+
+    .about-cta-box p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .about-cta-box .section-label {
+      justify-content: center;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .about-story-grid,
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-card {
+        min-height: 320px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .about-hero {
+        min-height: 75vh;
+        padding-top: 140px;
+      }
+
+      .about-hero h1 {
+        font-size: 4rem;
+      }
+
+      .about-story,
+      .mission-section,
+      .principles-section,
+      .ecosystem-section,
+      .founder-section,
+      .about-cta {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .mission-box,
+      .about-cta-box {
+        padding: 60px 25px;
+      }
+
+      .ecosystem-flow {
+        gap: 10px;
+      }
+
+      .ecosystem-arrow {
+        display: none;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../" class="brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="./about/">About</a>
+        <a href="./ventures/">Ventures</a>
+        <a href="./impact/">Impact</a>
+        <a href="./vision/">Vision</a>
+
+        <a href="./contact/" class="nav-cta">
+          Partner With Us
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         ABOUT HERO
+    ========================== -->
+
+    <section class="about-hero">
+
+      <div class="section-label">
+        <span>01</span>
+        ABOUT MEISOPHANT
+      </div>
+
+      <h1>
+        We build
+        <span>what we believe</span>
+        should exist.
+      </h1>
+
+      <p class="about-intro">
+        Meisophant is a technology-driven company building products,
+        platforms, and digital solutions around real problems,
+        ambitious ideas, and the possibilities of tomorrow.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         OUR STORY
+    ========================== -->
+
+    <section class="about-story">
+
+      <div class="section-label">
+        <span>02</span>
+        OUR STORY
+      </div>
+
+      <div class="about-story-grid">
+
+        <h2 class="about-story-title">
+          From an idea
+          <span>to a company.</span>
+        </h2>
+
+        <div class="about-story-content">
+
+          <p>
+            Meisophant began with a simple belief: technology should not
+            only be consumed. It should be created.
+          </p>
+
+          <p>
+            What started as a digital services idea has grown into a
+            broader vision of building useful technology, experimenting
+            with new ideas, and creating products that can stand on
+            their own.
+          </p>
+
+          <p>
+            Today, Meisophant is developing an ecosystem of projects
+            across digital services, procurement, education, and
+            emerging technology.
+          </p>
+
+          <p>
+            We are still early. But we are building for the long term.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION
+    ========================== -->
+
+    <section class="mission-section">
+
+      <div class="mission-box">
+
+        <div class="section-label">
+          <span>03</span>
+          OUR MISSION
+        </div>
+
+        <h2>
+          Turning imagination
+          into <span>technology.</span>
+        </h2>
+
+        <p>
+          Our mission is to transform ambitious ideas into useful
+          technology—creating products and experiences that solve
+          problems, unlock opportunities, and make the future more
+          accessible.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRINCIPLES
+    ========================== -->
+
+    <section class="principles-section">
+
+      <div class="principles-heading">
+
+        <div class="section-label">
+          <span>04</span>
+          HOW WE THINK
+        </div>
+
+        <h2>
+          The principles
+          behind <span>the build.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="principles-grid">
+
+        <article class="principle-card">
+
+          <div class="principle-number">01</div>
+
+          <div>
+            <h3>Build</h3>
+
+            <p>
+              Ideas become valuable when they become real. We believe
+              in moving from imagination to execution.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="principle-card">
+
+          <div class="principle-number">02</div>
+
+          <div>
+            <h3>Experiment</h3>
+
+            <p>
+              Not every idea will work. We test, learn, improve, and
+              keep moving instead of waiting for perfection.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="principle-card">
+
+          <div class="principle-number">03</div>
+
+          <div>
+            <h3>Think Long-Term</h3>
+
+            <p>
+              We are interested in building things that can grow,
+              evolve, and create lasting value.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ECOSYSTEM
+    ========================== -->
+
+    <section class="ecosystem-section">
+
+      <div class="ecosystem-content">
+
+        <div class="section-label">
+          <span>05</span>
+          THE ECOSYSTEM
+        </div>
+
+        <h2>
+          One vision.
+          <span>Many possibilities.</span>
+        </h2>
+
+        <p>
+          Meisophant is designed to grow beyond a single product.
+          Different ideas can become different products, initiatives,
+          and eventually independent companies—all connected by one
+          larger vision.
+        </p>
+
+        <div class="ecosystem-flow">
+
+          <div class="ecosystem-node">
+            MEISOPHANT
+          </div>
+
+          <div class="ecosystem-arrow">→</div>
+
+          <div class="ecosystem-node">
+            PRODUCTS
+          </div>
+
+          <div class="ecosystem-arrow">→</div>
+
+          <div class="ecosystem-node">
+            COMPANIES
+          </div>
+
+          <div class="ecosystem-arrow">→</div>
+
+          <div class="ecosystem-node">
+            IMPACT
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOUNDER
+    ========================== -->
+
+    <section class="founder-section">
+
+      <div class="founder-grid">
+
+        <div class="founder-content">
+
+          <div class="section-label">
+            <span>06</span>
+            THE BUILDER
+          </div>
+
+          <h2>
+            Built with
+            <span>curiosity.</span>
+          </h2>
+
+          <p>
+            Meisophant is driven by a desire to learn, experiment,
+            create, and turn ambitious ideas into reality.
+          </p>
+
+          <p>
+            The company is being built with a long-term mindset:
+            start small, learn continuously, create real value,
+            and grow one meaningful step at a time.
+          </p>
+
+        </div>
+
+
+        <div class="founder-card">
+
+          <div class="founder-symbol">
+            M
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="about-cta">
+
+      <div class="about-cta-box">
+
+        <div class="section-label">
+          <span>07</span>
+          WHAT'S NEXT
+        </div>
+
+        <h2>
+          The story is
+          <span>still being written.</span>
+        </h2>
+
+        <p>
+          We're building the foundation today for the products,
+          companies, and technologies of tomorrow.
+        </p>
+
+        <a href="./ventures/" class="btn btn-primary">
+          Explore Our Ventures
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="../" class="brand">
+
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="./about/">About</a>
+        <a href="./ventures/">Ventures</a>
+        <a href="./impact/">Impact</a>
+        <a href="./vision/">Vision</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
+```
   
