@@ -1,1 +1,1205 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Impact | Meisophant</title>
+
+  <meta
+    name="description"
+    content="Explore Meisophant's progress, milestones, projects, and measurable impact as we build technology for the future."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    /* =========================
+       IMPACT HERO
+    ========================== */
+
+    .impact-hero {
+      min-height: 80vh;
+      max-width: 1400px;
+      margin: auto;
+      padding: 160px 5% 100px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .impact-hero h1 {
+      max-width: 1100px;
+      margin-top: 28px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+    }
+
+    .impact-hero h1 span {
+      color: var(--purple);
+    }
+
+    .impact-intro {
+      max-width: 680px;
+      margin-top: 40px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       CORE METRICS
+    ========================== */
+
+    .metrics-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 5% 120px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+
+      background: var(--border);
+    }
+
+    .metric-card {
+      min-height: 250px;
+      padding: 35px;
+
+      background: var(--black);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1;
+
+      color: var(--purple-light);
+    }
+
+    .metric-label {
+      color: #77737d;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    .metric-note {
+      margin-top: 8px;
+
+      color: #4f4b54;
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       EVIDENCE
+    ========================== */
+
+    .evidence-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .evidence-header {
+      max-width: 850px;
+    }
+
+    .evidence-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .evidence-header h2 span {
+      color: var(--purple);
+    }
+
+    .evidence-header p {
+      max-width: 680px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       EVIDENCE CARDS
+    ========================== */
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      margin-top: 65px;
+    }
+
+    .evidence-card {
+      min-height: 380px;
+      padding: 35px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.4s ease;
+    }
+
+    .evidence-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(147,112,219,0.4);
+    }
+
+    .evidence-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .evidence-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+    }
+
+    .evidence-status {
+      color: var(--purple-light);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+    }
+
+    .evidence-card h3 {
+      font-family: var(--font-display);
+      font-size: 34px;
+      letter-spacing: -0.03em;
+    }
+
+    .evidence-card p {
+      max-width: 500px;
+
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       MILESTONES
+    ========================== */
+
+    .milestones-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .milestones-header {
+      max-width: 800px;
+    }
+
+    .milestones-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .milestones-header h2 span {
+      color: var(--purple);
+    }
+
+    .milestones-header p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       TIMELINE
+    ========================== */
+
+    .timeline {
+      position: relative;
+
+      margin-top: 70px;
+      padding-left: 50px;
+
+      border-left: 1px solid var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+
+      padding: 0 0 70px 35px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+      left: -55px;
+      top: 3px;
+
+      width: 9px;
+      height: 9px;
+
+      border-radius: 50%;
+
+      background: var(--purple);
+
+      box-shadow:
+        0 0 18px rgba(147,112,219,0.5);
+    }
+
+    .timeline-date {
+      color: var(--purple-light);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+    }
+
+    .timeline-item h3 {
+      margin-top: 12px;
+
+      font-family: var(--font-display);
+      font-size: 28px;
+    }
+
+    .timeline-item p {
+      max-width: 650px;
+      margin-top: 10px;
+
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       IMPACT AREAS
+    ========================== */
+
+    .impact-areas {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .impact-area-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      margin-top: 65px;
+
+      background: var(--border);
+    }
+
+    .impact-area {
+      min-height: 320px;
+      padding: 35px;
+
+      background: var(--black);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .impact-area-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+    .impact-area h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+    }
+
+    .impact-area p {
+      margin-top: 12px;
+
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       TRANSPARENCY
+    ========================== */
+
+    .transparency-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 110px 5%;
+    }
+
+    .transparency-box {
+      padding: 70px 8%;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(147,112,219,0.1),
+          transparent 40%
+        ),
+        rgba(255,255,255,0.02);
+    }
+
+    .transparency-box h2 {
+      max-width: 900px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .transparency-box h2 span {
+      color: var(--purple);
+    }
+
+    .transparency-box p {
+      max-width: 700px;
+      margin-top: 30px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .impact-cta {
+      max-width: 1400px;
+      margin: auto;
+      padding: 110px 5% 140px;
+    }
+
+    .impact-cta-box {
+      padding: 90px 8%;
+
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,112,219,0.1),
+          transparent 65%
+        );
+    }
+
+    .impact-cta-box .section-label {
+      justify-content: center;
+    }
+
+    .impact-cta-box h2 {
+      max-width: 850px;
+      margin: 25px auto 30px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .impact-cta-box h2 span {
+      color: var(--purple);
+    }
+
+    .impact-cta-box p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-area-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .impact-hero {
+        min-height: 75vh;
+        padding-top: 140px;
+      }
+
+      .impact-hero h1 {
+        font-size: 4rem;
+      }
+
+      .metrics-section,
+      .evidence-section,
+      .milestones-section,
+      .impact-areas,
+      .transparency-section,
+      .impact-cta {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-card {
+        min-height: 200px;
+      }
+
+      .evidence-card {
+        min-height: 330px;
+      }
+
+      .timeline {
+        padding-left: 30px;
+      }
+
+      .timeline-item {
+        padding-left: 25px;
+      }
+
+      .timeline-item::before {
+        left: -35px;
+      }
+
+      .transparency-box,
+      .impact-cta-box {
+        padding: 60px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../" class="brand">
+
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+        <a href="../contact/" class="nav-cta">
+          Partner With Us
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="impact-hero">
+
+      <div class="section-label">
+        <span>01</span>
+        IMPACT & PROGRESS
+      </div>
+
+      <h1>
+        Don't just
+        <span>take our word.</span>
+      </h1>
+
+      <p class="impact-intro">
+        We believe credibility should be earned through what we build,
+        who we reach, and the results we can demonstrate. This page
+        documents that journey.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         CORE METRICS
+    ========================== -->
+
+    <section class="metrics-section">
+
+      <div class="metrics-grid">
+
+        <div class="metric-card">
+
+          <div class="metric-number">02</div>
+
+          <div>
+
+            <div class="metric-label">
+              ACTIVE INITIATIVES
+            </div>
+
+            <div class="metric-note">
+              Currently being developed and operated
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <div class="metric-number">01</div>
+
+          <div>
+
+            <div class="metric-label">
+              LIVE ECOSYSTEM
+            </div>
+
+            <div class="metric-note">
+              Meisophant
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <div class="metric-number">2024</div>
+
+          <div>
+
+            <div class="metric-label">
+              ORIGIN
+            </div>
+
+            <div class="metric-note">
+              Meisophant launched online
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="metric-card">
+
+          <div class="metric-number">∞</div>
+
+          <div>
+
+            <div class="metric-label">
+              FUTURE POSSIBILITIES
+            </div>
+
+            <div class="metric-note">
+              More ideas being explored
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVIDENCE
+    ========================== -->
+
+    <section class="evidence-section">
+
+      <div class="evidence-header">
+
+        <div class="section-label">
+          <span>02</span>
+          WHAT WE MEASURE
+        </div>
+
+        <h2>
+          Progress becomes
+          <span>evidence.</span>
+        </h2>
+
+        <p>
+          As Meisophant grows, we will use measurable information
+          to document what is actually happening—not what we hope
+          will happen.
+        </p>
+
+      </div>
+
+
+      <div class="evidence-grid">
+
+        <article class="evidence-card">
+
+          <div class="evidence-top">
+
+            <span class="evidence-number">
+              01
+            </span>
+
+            <span class="evidence-status">
+              TRACKING
+            </span>
+
+          </div>
+
+          <div>
+
+            <h3>People Reached</h3>
+
+            <p>
+              The number of people who interact with, learn from,
+              or benefit from Meisophant's products and initiatives.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+          <div class="evidence-top">
+
+            <span class="evidence-number">
+              02
+            </span>
+
+            <span class="evidence-status">
+              TRACKING
+            </span>
+
+          </div>
+
+          <div>
+
+            <h3>Businesses Served</h3>
+
+            <p>
+              Businesses, vendors, organizations, and other users
+              reached through Meisophant products and services.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+          <div class="evidence-top">
+
+            <span class="evidence-number">
+              03
+            </span>
+
+            <span class="evidence-status">
+              BUILDING
+            </span>
+
+          </div>
+
+          <div>
+
+            <h3>Products Launched</h3>
+
+            <p>
+              The products and platforms developed and released
+              as part of the Meisophant ecosystem.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="evidence-card">
+
+          <div class="evidence-top">
+
+            <span class="evidence-number">
+              04
+            </span>
+
+            <span class="evidence-status">
+              FUTURE
+            </span>
+
+          </div>
+
+          <div>
+
+            <h3>Economic Value</h3>
+
+            <p>
+              Revenue, partnerships, opportunities, and other
+              measurable economic activity created through the
+              ecosystem.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MILESTONES
+    ========================== -->
+
+    <section class="milestones-section">
+
+      <div class="milestones-header">
+
+        <div class="section-label">
+          <span>03</span>
+          MILESTONES
+        </div>
+
+        <h2>
+          The journey,
+          <span>documented.</span>
+        </h2>
+
+        <p>
+          Every company has a beginning. These milestones show
+          how Meisophant is progressing from an idea into a larger
+          technology ecosystem.
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            28 JULY 2024
+          </div>
+
+          <h3>Meisophant Begins</h3>
+
+          <p>
+            Meisophant was launched online with a vision to combine
+            creativity and technology.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            2026
+          </div>
+
+          <h3>The Ecosystem Expands</h3>
+
+          <p>
+            Meisophant moved beyond digital services into product
+            development, with initiatives including ProcuLocal
+            and TekSpot.
+          </p>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <div class="timeline-date">
+            NEXT MILESTONE
+          </div>
+
+          <h3>More People. More Products.</h3>
+
+          <p>
+            Future milestones will be added here as they happen,
+            including users, partnerships, launches, revenue,
+            recognition, and measurable impact.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         IMPACT AREAS
+    ========================== -->
+
+    <section class="impact-areas">
+
+      <div class="section-label">
+        <span>04</span>
+        WHERE WE AIM TO CREATE VALUE
+      </div>
+
+
+      <div class="impact-area-grid">
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>Technology</h3>
+
+            <p>
+              Building practical technology that can solve problems
+              and open new possibilities.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>Opportunity</h3>
+
+            <p>
+              Creating platforms and products that connect people
+              with opportunities.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>Education</h3>
+
+            <p>
+              Helping more people access technology knowledge and
+              develop the ability to build.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>Business</h3>
+
+            <p>
+              Helping businesses participate in an increasingly
+              digital economy.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            05
+          </div>
+
+          <div>
+
+            <h3>Innovation</h3>
+
+            <p>
+              Exploring ideas that can become new products,
+              technologies, and companies.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="impact-area">
+
+          <div class="impact-area-number">
+            06
+          </div>
+
+          <div>
+
+            <h3>Long-Term Growth</h3>
+
+            <p>
+              Building a foundation capable of supporting an
+              expanding technology ecosystem.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRANSPARENCY
+    ========================== -->
+
+    <section class="transparency-section">
+
+      <div class="transparency-box">
+
+        <div class="section-label">
+          <span>05</span>
+          OUR STANDARD
+        </div>
+
+        <h2>
+          We would rather show
+          <span>the truth.</span>
+        </h2>
+
+        <p>
+          Meisophant is still growing. Some numbers will be small.
+          Some milestones have not happened yet. That's okay.
+          We will update this page as real progress happens instead
+          of presenting projections as achievements.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="impact-cta">
+
+      <div class="impact-cta-box">
+
+        <div class="section-label">
+          <span>06</span>
+          THE NEXT MILESTONE
+        </div>
+
+        <h2>
+          Help us turn
+          <span>progress into impact.</span>
+        </h2>
+
+        <p>
+          Whether through collaboration, partnerships, or supporting
+          the products we're building, the next chapter is created
+          one meaningful step at a time.
+        </p>
+
+        <a href="../contact/" class="btn btn-primary">
+          Partner With Us
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="../" class="brand">
+
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
