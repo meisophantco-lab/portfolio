@@ -1,1 +1,948 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Partner With Us | Meisophant</title>
+
+  <meta
+    name="description"
+    content="Connect with Meisophant for partnerships, investment opportunities, technology initiatives, and collaborations."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    /* =========================
+       CONTACT HERO
+    ========================== */
+
+    .contact-hero {
+      max-width: 1400px;
+      min-height: 82vh;
+
+      margin: auto;
+      padding: 160px 5% 100px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-hero h1 {
+      max-width: 1100px;
+      margin-top: 30px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 9vw, 9rem);
+      line-height: 0.86;
+      letter-spacing: -0.075em;
+    }
+
+    .contact-hero h1 span {
+      color: var(--purple);
+    }
+
+    .contact-intro {
+      max-width: 700px;
+      margin-top: 40px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       PARTNERSHIP TYPES
+    ========================== */
+
+    .connect-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 100px 5% 120px;
+    }
+
+    .connect-header {
+      max-width: 800px;
+    }
+
+    .connect-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .connect-header h2 span {
+      color: var(--purple);
+    }
+
+    .connect-header p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .connect-grid {
+      margin-top: 65px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+
+      background: var(--border);
+    }
+
+    .connect-card {
+      min-height: 290px;
+      padding: 35px;
+
+      background: var(--black);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.4s ease;
+    }
+
+    .connect-card:hover {
+      background: rgba(147,112,219,0.04);
+    }
+
+    .connect-number {
+      color: #55515b;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+    }
+
+    .connect-card h3 {
+      margin-top: 30px;
+
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: -0.035em;
+    }
+
+    .connect-card h3 span {
+      color: var(--purple);
+    }
+
+    .connect-card p {
+      max-width: 500px;
+      margin-top: 12px;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       CONTACT GRID
+    ========================== */
+
+    .contact-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 100px 5% 140px;
+
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .contact-info h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .contact-info h2 span {
+      color: var(--purple);
+    }
+
+    .contact-info > p {
+      max-width: 500px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       CONTACT DETAILS
+    ========================== */
+
+    .contact-details {
+      margin-top: 50px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-detail {
+      padding: 22px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-detail-label {
+      color: #59555f;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+    }
+
+    .contact-detail a {
+      display: inline-block;
+
+      margin-top: 8px;
+
+      color: #eee;
+
+      font-size: 15px;
+
+      transition: 0.3s ease;
+    }
+
+    .contact-detail a:hover {
+      color: var(--purple-light);
+    }
+
+
+    /* =========================
+       FORM
+    ========================== */
+
+    .contact-form-wrapper {
+      padding: 45px;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(147,112,219,0.08),
+          transparent 35%
+        ),
+        rgba(255,255,255,0.015);
+    }
+
+    .form-heading {
+      margin-bottom: 35px;
+    }
+
+    .form-heading h3 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: -0.035em;
+    }
+
+    .form-heading p {
+      margin-top: 10px;
+
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+
+      margin-bottom: 9px;
+
+      color: #88838d;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+      width: 100%;
+
+      padding: 16px 17px;
+
+      border: 1px solid var(--border);
+      outline: none;
+
+      background: rgba(255,255,255,0.025);
+
+      color: #eee;
+
+      font-family: var(--font-body);
+      font-size: 14px;
+
+      border-radius: 0;
+
+      transition: 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: rgba(147,112,219,0.6);
+      background: rgba(147,112,219,0.025);
+    }
+
+    .form-group select option {
+      background: #090909;
+      color: #eee;
+    }
+
+    .form-group textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 10px;
+    }
+
+    .form-note {
+      margin-top: 15px;
+
+      color: #57535c;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       INVESTMENT NOTE
+    ========================== */
+
+    .opportunity-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 5% 140px;
+    }
+
+    .opportunity-box {
+      padding: 70px 8%;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 15% 50%,
+          rgba(147,112,219,0.08),
+          transparent 40%
+        );
+    }
+
+    .opportunity-box h2 {
+      max-width: 900px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .opportunity-box h2 span {
+      color: var(--purple);
+    }
+
+    .opportunity-box p {
+      max-width: 700px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .contact-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .contact-hero {
+        min-height: 75vh;
+        padding-top: 140px;
+      }
+
+      .contact-hero h1 {
+        font-size: 4rem;
+      }
+
+      .contact-intro {
+        font-size: 15px;
+      }
+
+      .connect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section,
+      .connect-section {
+        padding-top: 80px;
+        padding-bottom: 90px;
+      }
+
+      .contact-form-wrapper {
+        padding: 25px;
+      }
+
+      .opportunity-section {
+        padding-bottom: 90px;
+      }
+
+      .opportunity-box {
+        padding: 55px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../" class="brand">
+
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+        <a href="./" class="nav-cta">
+          Partner With Us
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="contact-hero">
+
+      <div class="section-label">
+        <span>01</span>
+        PARTNER WITH US
+      </div>
+
+      <h1>
+        Let's build
+        <span>what matters.</span>
+      </h1>
+
+      <p class="contact-intro">
+        Meisophant is open to conversations with people and
+        organizations who see opportunities worth building.
+        Tell us what you're thinking.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONNECTION TYPES
+    ========================== -->
+
+    <section class="connect-section">
+
+      <div class="connect-header">
+
+        <div class="section-label">
+          <span>02</span>
+          WHY CONNECT
+        </div>
+
+        <h2>
+          Different paths.
+          <span>One ecosystem.</span>
+        </h2>
+
+        <p>
+          Whether you're interested in supporting a venture,
+          building alongside us, or exploring an institutional
+          opportunity, there is room for meaningful conversations.
+        </p>
+
+      </div>
+
+
+      <div class="connect-grid">
+
+        <article class="connect-card">
+
+          <div class="connect-number">
+            01 / INVESTMENT
+          </div>
+
+          <div>
+
+            <h3>
+              Investment &
+              <span>Capital</span>
+            </h3>
+
+            <p>
+              Connect with us about supporting promising products,
+              technologies, and future ventures as they develop.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="connect-card">
+
+          <div class="connect-number">
+            02 / PARTNERSHIP
+          </div>
+
+          <div>
+
+            <h3>
+              Strategic
+              <span>Partnerships</span>
+            </h3>
+
+            <p>
+              Explore opportunities to combine capabilities,
+              technology, networks, or resources around a shared goal.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="connect-card">
+
+          <div class="connect-number">
+            03 / INSTITUTIONS
+          </div>
+
+          <div>
+
+            <h3>
+              Government &
+              <span>Institutions</span>
+            </h3>
+
+            <p>
+              We welcome conversations around technology,
+              innovation, youth development, digital infrastructure,
+              and other areas of mutual interest.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="connect-card">
+
+          <div class="connect-number">
+            04 / BUILDERS
+          </div>
+
+          <div>
+
+            <h3>
+              Builders &
+              <span>Collaborators</span>
+            </h3>
+
+            <p>
+              If you have expertise, ideas, or capabilities that
+              could contribute to something we're building,
+              we'd like to hear from you.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact-section">
+
+      <div class="contact-info">
+
+        <div class="section-label">
+          <span>03</span>
+          START A CONVERSATION
+        </div>
+
+        <h2>
+          Tell us
+          <span>what you see.</span>
+        </h2>
+
+        <p>
+          Great partnerships often begin with a simple conversation.
+          Share enough information for us to understand the
+          opportunity and we'll take it from there.
+        </p>
+
+
+        <div class="contact-details">
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-label">
+              EMAIL
+            </div>
+
+            <a href="mailto:info@meisophant.name.ng">
+              info@meisophant.name.ng
+            </a>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-label">
+              WHATSAPP / PHONE
+            </div>
+
+            <a href="https://wa.me/2349029673978">
+              +234 902 967 3978
+            </a>
+
+          </div>
+
+
+          <div class="contact-detail">
+
+            <div class="contact-detail-label">
+              WEBSITE
+            </div>
+
+            <a href="https://meisophant.name.ng/" target="_blank">
+              meisophant.name.ng
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           FORM
+      ========================== -->
+
+      <div class="contact-form-wrapper">
+
+        <div class="form-heading">
+
+          <h3>
+            Open a conversation.
+          </h3>
+
+          <p>
+            Tell us who you are, what you're interested in,
+            and what you'd like to explore.
+          </p>
+
+        </div>
+
+
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+
+          <div class="form-group">
+
+            <label for="name">
+              NAME / ORGANIZATION
+            </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name or organization"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              EMAIL
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="interest">
+              I'M INTERESTED IN
+            </label>
+
+            <select
+              id="interest"
+              name="interest"
+              required
+            >
+
+              <option value="" selected disabled>
+                Select an option
+              </option>
+
+              <option value="investment">
+                Investment / Capital
+              </option>
+
+              <option value="partnership">
+                Strategic Partnership
+              </option>
+
+              <option value="government">
+                Government / Institution
+              </option>
+
+              <option value="collaboration">
+                Collaboration
+              </option>
+
+              <option value="venture">
+                A Meisophant Venture
+              </option>
+
+              <option value="other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              MESSAGE
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us what you're thinking..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary form-submit"
+          >
+            Send Message
+            <span>↗</span>
+          </button>
+
+          <p class="form-note">
+            By submitting this form, you agree that Meisophant
+            may use the information provided to respond to your
+            inquiry.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         OPPORTUNITY
+    ========================== -->
+
+    <section class="opportunity-section">
+
+      <div class="opportunity-box">
+
+        <div class="section-label">
+          <span>04</span>
+          BEYOND THE FORM
+        </div>
+
+        <h2>
+          Some opportunities
+          deserve a <span>conversation.</span>
+        </h2>
+
+        <p>
+          If your proposal involves significant investment,
+          institutional collaboration, technology development,
+          or a long-term strategic relationship, you can contact
+          us directly by email as well.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="../" class="brand">
+
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
