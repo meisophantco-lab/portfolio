@@ -1,1 +1,1277 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vision | Meisophant</title>
+
+  <meta
+    name="description"
+    content="Discover the long-term vision of Meisophant — building technology, companies, and opportunities for a more connected future."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    /* =========================
+       VISION HERO
+    ========================== */
+
+    .vision-hero {
+      min-height: 92vh;
+      max-width: 1400px;
+      margin: auto;
+      padding: 160px 5% 120px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .vision-hero h1 {
+      max-width: 1200px;
+      margin-top: 30px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 9vw, 9rem);
+      line-height: 0.86;
+      letter-spacing: -0.075em;
+    }
+
+    .vision-hero h1 span {
+      color: var(--purple);
+    }
+
+    .vision-intro {
+      max-width: 720px;
+      margin-top: 45px;
+
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .vision-scroll {
+      position: absolute;
+      bottom: 45px;
+      left: 5%;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      color: #57535d;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+    }
+
+    .vision-scroll::before {
+      content: "";
+
+      width: 35px;
+      height: 1px;
+
+      background: var(--purple);
+    }
+
+
+    /* =========================
+       NORTH STAR
+    ========================== */
+
+    .north-star {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .north-star-box {
+      min-height: 600px;
+      padding: 70px;
+
+      border: 1px solid var(--border);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 75% 45%,
+          rgba(147,112,219,0.13),
+          transparent 35%
+        );
+    }
+
+    .north-star-box::after {
+      content: "";
+
+      position: absolute;
+      width: 450px;
+      height: 450px;
+
+      right: -120px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      border: 1px solid rgba(147,112,219,0.15);
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 0 50px rgba(147,112,219,0.025),
+        0 0 0 100px rgba(147,112,219,0.02);
+    }
+
+    .north-star-box h2 {
+      position: relative;
+      z-index: 2;
+
+      max-width: 950px;
+
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 6vw, 6.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+    }
+
+    .north-star-box h2 span {
+      color: var(--purple);
+    }
+
+    .north-star-box p {
+      position: relative;
+      z-index: 2;
+
+      max-width: 700px;
+      margin-top: 35px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       PRINCIPLES
+    ========================== */
+
+    .principles-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .principles-header {
+      max-width: 800px;
+    }
+
+    .principles-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .principles-header h2 span {
+      color: var(--purple);
+    }
+
+    .principles-header p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .principles-grid {
+      margin-top: 65px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .principle {
+      min-height: 360px;
+      padding: 35px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.4s ease;
+    }
+
+    .principle:hover {
+      transform: translateY(-5px);
+      border-color: rgba(147,112,219,0.4);
+    }
+
+    .principle-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+    .principle h3 {
+      margin-top: 40px;
+
+      font-family: var(--font-display);
+      font-size: 35px;
+      letter-spacing: -0.04em;
+    }
+
+    .principle h3 span {
+      color: var(--purple);
+    }
+
+    .principle p {
+      max-width: 500px;
+      margin-top: 15px;
+
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ECOSYSTEM
+    ========================== */
+
+    .ecosystem-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .ecosystem-header {
+      max-width: 850px;
+    }
+
+    .ecosystem-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .ecosystem-header h2 span {
+      color: var(--purple);
+    }
+
+    .ecosystem-header p {
+      max-width: 680px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       ECOSYSTEM DIAGRAM
+    ========================== */
+
+    .ecosystem-map {
+      min-height: 650px;
+      margin-top: 70px;
+
+      position: relative;
+
+      border: 1px solid var(--border);
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,112,219,0.07),
+          transparent 45%
+        );
+    }
+
+    .ecosystem-lines {
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(147,112,219,0.05) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(147,112,219,0.05) 1px,
+          transparent 1px
+        );
+
+      background-size: 45px 45px;
+    }
+
+    .ecosystem-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 190px;
+      height: 190px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      border: 1px solid rgba(147,112,219,0.55);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(147,112,219,0.2),
+          rgba(10,8,13,0.95) 65%
+        );
+
+      box-shadow:
+        0 0 80px rgba(147,112,219,0.18);
+    }
+
+    .ecosystem-core strong {
+      font-family: var(--font-display);
+      font-size: 25px;
+      letter-spacing: -0.04em;
+    }
+
+    .ecosystem-core span {
+      display: block;
+
+      margin-top: 5px;
+
+      color: #716c78;
+      font-size: 8px;
+      letter-spacing: 0.15em;
+    }
+
+    .ecosystem-node {
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      border: 1px solid var(--border);
+
+      background: rgba(5,5,5,0.9);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      transition: 0.4s ease;
+    }
+
+    .ecosystem-node:hover {
+      border-color: rgba(147,112,219,0.5);
+      transform: scale(1.04);
+    }
+
+    .ecosystem-node strong {
+      display: block;
+
+      font-family: var(--font-display);
+      font-size: 18px;
+    }
+
+    .ecosystem-node span {
+      display: block;
+
+      margin-top: 7px;
+
+      color: #68636e;
+      font-size: 8px;
+      letter-spacing: 0.1em;
+    }
+
+    .node-one {
+      top: 12%;
+      left: 15%;
+    }
+
+    .node-two {
+      top: 12%;
+      right: 15%;
+    }
+
+    .node-three {
+      bottom: 12%;
+      left: 15%;
+    }
+
+    .node-four {
+      bottom: 12%;
+      right: 15%;
+    }
+
+
+    /* =========================
+       LONG TERM
+    ========================== */
+
+    .future-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .future-header {
+      max-width: 850px;
+    }
+
+    .future-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .future-header h2 span {
+      color: var(--purple);
+    }
+
+    .future-header p {
+      max-width: 680px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .future-list {
+      margin-top: 65px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .future-item {
+      padding: 32px 5px;
+
+      display: grid;
+      grid-template-columns: 80px 1fr 160px;
+      gap: 30px;
+      align-items: center;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .future-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+    }
+
+    .future-item h3 {
+      font-family: var(--font-display);
+      font-size: 25px;
+    }
+
+    .future-item p {
+      margin-top: 6px;
+
+      color: #706c75;
+      font-size: 13px;
+    }
+
+    .future-horizon {
+      text-align: right;
+
+      color: var(--purple-light);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+
+    /* =========================
+       FINAL STATEMENT
+    ========================== */
+
+    .statement-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 100px 5% 150px;
+    }
+
+    .statement-box {
+      padding: 100px 8%;
+
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,112,219,0.11),
+          transparent 65%
+        );
+    }
+
+    .statement-box h2 {
+      max-width: 1000px;
+      margin: auto;
+
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 7vw, 7rem);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+    }
+
+    .statement-box h2 span {
+      color: var(--purple);
+    }
+
+    .statement-box p {
+      max-width: 650px;
+      margin: 35px auto 0;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .statement-box .btn {
+      margin-top: 35px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ecosystem-node {
+        width: 125px;
+        height: 125px;
+      }
+
+      .ecosystem-core {
+        width: 160px;
+        height: 160px;
+      }
+
+      .future-item {
+        grid-template-columns: 50px 1fr;
+      }
+
+      .future-horizon {
+        grid-column: 2;
+        text-align: left;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .vision-hero {
+        min-height: 80vh;
+        padding-top: 140px;
+      }
+
+      .vision-hero h1 {
+        font-size: 4rem;
+      }
+
+      .vision-intro {
+        font-size: 15px;
+      }
+
+      .north-star,
+      .principles-section,
+      .ecosystem-section,
+      .future-section,
+      .statement-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .north-star-box {
+        min-height: 500px;
+        padding: 35px;
+      }
+
+      .north-star-box::after {
+        width: 280px;
+        height: 280px;
+        right: -150px;
+      }
+
+      .ecosystem-map {
+        min-height: 600px;
+      }
+
+      .ecosystem-node {
+        width: 100px;
+        height: 100px;
+      }
+
+      .ecosystem-node strong {
+        font-size: 13px;
+      }
+
+      .ecosystem-node span {
+        font-size: 6px;
+      }
+
+      .ecosystem-core {
+        width: 135px;
+        height: 135px;
+      }
+
+      .ecosystem-core strong {
+        font-size: 18px;
+      }
+
+      .node-one {
+        top: 8%;
+        left: 5%;
+      }
+
+      .node-two {
+        top: 8%;
+        right: 5%;
+      }
+
+      .node-three {
+        bottom: 8%;
+        left: 5%;
+      }
+
+      .node-four {
+        bottom: 8%;
+        right: 5%;
+      }
+
+      .statement-box {
+        padding: 70px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../" class="brand">
+
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+        <a href="../contact/" class="nav-cta">
+          Partner With Us
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="vision-hero">
+
+      <div class="section-label">
+        <span>01</span>
+        THE LONG VIEW
+      </div>
+
+      <h1>
+        Build what
+        <span>comes next.</span>
+      </h1>
+
+      <p class="vision-intro">
+        Meisophant is being built to become more than a digital
+        services company. The long-term vision is an ecosystem
+        capable of creating technology, products, companies,
+        opportunities, and lasting value.
+      </p>
+
+      <div class="vision-scroll">
+        EXPLORE THE VISION
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NORTH STAR
+    ========================== -->
+
+    <section class="north-star">
+
+      <div class="north-star-box">
+
+        <div class="section-label">
+          <span>02</span>
+          OUR NORTH STAR
+        </div>
+
+        <h2>
+          Turn imagination into
+          <span>technology.</span>
+        </h2>
+
+        <p>
+          We believe great ideas should not remain ideas forever.
+          Meisophant exists to explore those ideas, turn them into
+          useful technology, and build the organizations capable of
+          taking them further.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRINCIPLES
+    ========================== -->
+
+    <section class="principles-section">
+
+      <div class="principles-header">
+
+        <div class="section-label">
+          <span>03</span>
+          WHAT GUIDES US
+        </div>
+
+        <h2>
+          Four principles.
+          <span>One direction.</span>
+        </h2>
+
+        <p>
+          Our future will change as we learn, but these principles
+          provide the foundation for how we approach building.
+        </p>
+
+      </div>
+
+
+      <div class="principles-grid">
+
+        <article class="principle">
+
+          <div class="principle-number">
+            PRINCIPLE 01
+          </div>
+
+          <div>
+
+            <h3>
+              Build with
+              <span>purpose.</span>
+            </h3>
+
+            <p>
+              Technology should solve meaningful problems. We aim
+              to build things that have a reason to exist.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="principle">
+
+          <div class="principle-number">
+            PRINCIPLE 02
+          </div>
+
+          <div>
+
+            <h3>
+              Think
+              <span>long-term.</span>
+            </h3>
+
+            <p>
+              Some of the most important things we build may take
+              years to reach their full potential.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="principle">
+
+          <div class="principle-number">
+            PRINCIPLE 03
+          </div>
+
+          <div>
+
+            <h3>
+              Create
+              <span>opportunity.</span>
+            </h3>
+
+            <p>
+              We want the ecosystem to create opportunities for
+              builders, businesses, partners, and communities.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="principle">
+
+          <div class="principle-number">
+            PRINCIPLE 04
+          </div>
+
+          <div>
+
+            <h3>
+              Let results
+              <span>speak.</span>
+            </h3>
+
+            <p>
+              Ambition matters, but progress must eventually become
+              something measurable, useful, and real.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ECOSYSTEM
+    ========================== -->
+
+    <section class="ecosystem-section">
+
+      <div class="ecosystem-header">
+
+        <div class="section-label">
+          <span>04</span>
+          THE ECOSYSTEM
+        </div>
+
+        <h2>
+          One company.
+          <span>Many possibilities.</span>
+        </h2>
+
+        <p>
+          The long-term Meisophant ecosystem can contain different
+          products, platforms, technologies, and companies—each
+          solving different problems while sharing a common foundation.
+        </p>
+
+      </div>
+
+
+      <div class="ecosystem-map">
+
+        <div class="ecosystem-lines"></div>
+
+
+        <div class="ecosystem-core">
+
+          <div>
+
+            <strong>MEISOPHANT</strong>
+
+            <span>
+              THE FOUNDATION
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="ecosystem-node node-one">
+
+          <div>
+
+            <strong>SOFTWARE</strong>
+
+            <span>
+              PLATFORMS
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="ecosystem-node node-two">
+
+          <div>
+
+            <strong>HARDWARE</strong>
+
+            <span>
+              DEVICES
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="ecosystem-node node-three">
+
+          <div>
+
+            <strong>EDUCATION</strong>
+
+            <span>
+              KNOWLEDGE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="ecosystem-node node-four">
+
+          <div>
+
+            <strong>NEW VENTURES</strong>
+
+            <span>
+              COMPANIES
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LONG TERM
+    ========================== -->
+
+    <section class="future-section">
+
+      <div class="future-header">
+
+        <div class="section-label">
+          <span>05</span>
+          LONG-TERM DIRECTION
+        </div>
+
+        <h2>
+          From projects
+          <span>to institutions.</span>
+        </h2>
+
+        <p>
+          The goal is not to rush every idea into existence.
+          The goal is to build the capabilities, infrastructure,
+          partnerships, and resources needed to make ambitious
+          ideas sustainable.
+        </p>
+
+      </div>
+
+
+      <div class="future-list">
+
+        <div class="future-item">
+
+          <div class="future-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>Strengthen the Foundation</h3>
+
+            <p>
+              Grow Meisophant's technology, people, products,
+              credibility, and operating capabilities.
+            </p>
+
+          </div>
+
+          <div class="future-horizon">
+            NOW
+          </div>
+
+        </div>
+
+
+        <div class="future-item">
+
+          <div class="future-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>Scale Products</h3>
+
+            <p>
+              Take promising products from early-stage ideas
+              toward sustainable platforms.
+            </p>
+
+          </div>
+
+          <div class="future-horizon">
+            NEXT
+          </div>
+
+        </div>
+
+
+        <div class="future-item">
+
+          <div class="future-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>Build New Companies</h3>
+
+            <p>
+              Allow successful ideas to grow into independent
+              companies within the wider Meisophant ecosystem.
+            </p>
+
+          </div>
+
+          <div class="future-horizon">
+            LONG TERM
+          </div>
+
+        </div>
+
+
+        <div class="future-item">
+
+          <div class="future-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>Expand the Ecosystem</h3>
+
+            <p>
+              Develop larger infrastructure, partnerships,
+              facilities, and capabilities to support innovation.
+            </p>
+
+          </div>
+
+          <div class="future-horizon">
+            FUTURE
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL STATEMENT
+    ========================== -->
+
+    <section class="statement-section">
+
+      <div class="statement-box">
+
+        <div class="section-label">
+          <span>06</span>
+          THE MEISOPHANT VISION
+        </div>
+
+        <h2>
+          We are not building
+          <span>one future.</span>
+        </h2>
+
+        <p>
+          We are building the foundation from which many futures
+          can emerge.
+        </p>
+
+        <a href="../contact/" class="btn btn-primary">
+          Partner With Us
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="../" class="brand">
+
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="../about/">About</a>
+        <a href="../ventures/">Ventures</a>
+        <a href="../impact/">Impact</a>
+        <a href="../vision/">Vision</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
