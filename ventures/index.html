@@ -1,1 +1,1133 @@
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ventures | Meisophant</title>
+
+  <meta
+    name="description"
+    content="Explore the products, platforms, initiatives, and future ventures being built within the Meisophant ecosystem."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <link rel="icon" href="https://meisophant.name.ng/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    /* =========================
+       VENTURES HERO
+    ========================== */
+
+    .ventures-hero {
+      min-height: 80vh;
+      max-width: 1400px;
+      margin: auto;
+      padding: 160px 5% 100px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ventures-hero h1 {
+      max-width: 1050px;
+      margin-top: 28px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+    }
+
+    .ventures-hero h1 span {
+      color: var(--purple);
+    }
+
+    .ventures-intro {
+      max-width: 680px;
+      margin-top: 40px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       STATUS BAR
+    ========================== */
+
+    .venture-status {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 5% 100px;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+
+      background: var(--border);
+    }
+
+    .status-item {
+      padding: 30px;
+      background: var(--black);
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 15px rgba(147,112,219,0.6);
+      flex-shrink: 0;
+    }
+
+    .status-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+    }
+
+    .status-item span {
+      display: block;
+      margin-top: 4px;
+
+      color: #706c75;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================
+       VENTURES SECTION
+    ========================== */
+
+    .ventures-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 110px 5%;
+    }
+
+    .ventures-heading {
+      max-width: 800px;
+    }
+
+    .ventures-heading h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .ventures-heading h2 span {
+      color: var(--purple);
+    }
+
+    .ventures-heading p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       MAIN VENTURE
+    ========================== */
+
+    .main-venture {
+      margin-top: 65px;
+
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 600px;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(147,112,219,0.12),
+          transparent 40%
+        ),
+        rgba(255,255,255,0.02);
+    }
+
+    .main-venture-info {
+      padding: 55px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .venture-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .venture-index {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+    .venture-state {
+      padding: 6px 10px;
+
+      border: 1px solid rgba(147,112,219,0.25);
+
+      color: var(--purple-light);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+    }
+
+    .main-venture-info h3 {
+      margin-top: 35px;
+
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 7vw, 7rem);
+      line-height: 0.85;
+      letter-spacing: -0.06em;
+    }
+
+    .main-venture-info h3 span {
+      color: var(--purple);
+    }
+
+    .main-venture-description {
+      max-width: 580px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .venture-features {
+      margin-top: 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .venture-feature {
+      padding: 9px 13px;
+
+      border: 1px solid rgba(255,255,255,0.07);
+
+      color: #8e8a94;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .venture-action {
+      margin-top: 40px;
+    }
+
+
+    /* =========================
+       VISUAL PANEL
+    ========================== */
+
+    .venture-visual {
+      min-height: 600px;
+
+      position: relative;
+      overflow: hidden;
+
+      border-left: 1px solid var(--border);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-grid {
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(147,112,219,0.08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(147,112,219,0.08) 1px,
+          transparent 1px
+        );
+
+      background-size: 40px 40px;
+
+      transform: perspective(500px) rotateX(55deg) scale(1.5);
+      transform-origin: center bottom;
+    }
+
+    .visual-orb {
+      width: 180px;
+      height: 180px;
+
+      position: relative;
+      z-index: 2;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle at 35% 30%,
+          var(--purple-light),
+          var(--purple-dark) 30%,
+          #09060d 70%
+        );
+
+      box-shadow:
+        0 0 80px rgba(147,112,219,0.3),
+        0 0 180px rgba(147,112,219,0.12);
+    }
+
+    .visual-orb::before,
+    .visual-orb::after {
+      content: "";
+      position: absolute;
+      inset: -35px;
+
+      border: 1px solid rgba(147,112,219,0.25);
+      border-radius: 50%;
+    }
+
+    .visual-orb::after {
+      inset: -65px;
+      transform: rotateX(70deg);
+    }
+
+
+    /* =========================
+       SECONDARY VENTURES
+    ========================== */
+
+    .secondary-grid {
+      margin-top: 20px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .secondary-card {
+      min-height: 440px;
+      padding: 35px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      transition: 0.4s ease;
+    }
+
+    .secondary-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(147,112,219,0.4);
+    }
+
+    .secondary-card .venture-index {
+      margin-bottom: 70px;
+    }
+
+    .secondary-card h3 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      letter-spacing: -0.04em;
+    }
+
+    .secondary-card h3 span {
+      color: var(--purple);
+    }
+
+    .secondary-card p {
+      max-width: 500px;
+      margin-top: 15px;
+
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .secondary-card a {
+      display: inline-flex;
+      margin-top: 25px;
+
+      color: var(--purple-light);
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       FUTURE PIPELINE
+    ========================== */
+
+    .pipeline-section {
+      max-width: 1400px;
+      margin: auto;
+      padding: 120px 5%;
+    }
+
+    .pipeline-header {
+      max-width: 800px;
+    }
+
+    .pipeline-header h2 {
+      margin-top: 25px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .pipeline-header h2 span {
+      color: var(--purple);
+    }
+
+    .pipeline-header p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .pipeline-list {
+      margin-top: 65px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .pipeline-item {
+      padding: 30px 5px;
+
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 30px;
+      align-items: center;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pipeline-number {
+      color: #55515b;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    .pipeline-item h3 {
+      font-family: var(--font-display);
+      font-size: 25px;
+    }
+
+    .pipeline-item p {
+      margin-top: 6px;
+
+      color: #706c75;
+      font-size: 13px;
+    }
+
+    .pipeline-status {
+      color: #77737d;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+    }
+
+
+    /* =========================
+       ECOSYSTEM CTA
+    ========================== */
+
+    .ventures-cta {
+      max-width: 1400px;
+      margin: auto;
+      padding: 110px 5% 140px;
+    }
+
+    .ventures-cta-box {
+      padding: 90px 8%;
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(147,112,219,0.1),
+          transparent 65%
+        );
+    }
+
+    .ventures-cta-box .section-label {
+      justify-content: center;
+    }
+
+    .ventures-cta-box h2 {
+      max-width: 900px;
+      margin: 25px auto 30px;
+
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .ventures-cta-box h2 span {
+      color: var(--purple);
+    }
+
+    .ventures-cta-box p {
+      max-width: 650px;
+      margin: auto auto 35px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .status-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-venture {
+        grid-template-columns: 1fr;
+      }
+
+      .venture-visual {
+        min-height: 400px;
+        border-left: 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .secondary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pipeline-item {
+        grid-template-columns: 50px 1fr;
+      }
+
+      .pipeline-status {
+        grid-column: 2;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .ventures-hero {
+        min-height: 75vh;
+        padding-top: 140px;
+      }
+
+      .ventures-hero h1 {
+        font-size: 4rem;
+      }
+
+      .ventures-section,
+      .pipeline-section,
+      .ventures-cta {
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      .main-venture-info {
+        padding: 30px;
+      }
+
+      .main-venture-info h3 {
+        font-size: 4rem;
+      }
+
+      .venture-visual {
+        min-height: 330px;
+      }
+
+      .visual-orb {
+        width: 130px;
+        height: 130px;
+      }
+
+      .secondary-card {
+        min-height: 350px;
+      }
+
+      .ventures-cta-box {
+        padding: 60px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       BACKGROUND
+  ========================== -->
+
+  <canvas id="gridCanvas"></canvas>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../" class="brand">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEISOPHANT</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="./about/">About</a>
+        <a href="./ventures/">Ventures</a>
+        <a href="./impact/">Impact</a>
+        <a href="./vision/">Vision</a>
+
+        <a href="./contact/" class="nav-cta">
+          Partner With Us
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="ventures-hero">
+
+      <div class="section-label">
+        <span>01</span>
+        THE MEISOPHANT ECOSYSTEM
+      </div>
+
+      <h1>
+        Ideas become
+        <span>ventures.</span>
+      </h1>
+
+      <p class="ventures-intro">
+        We don't want to build just one thing. Meisophant is creating
+        products, platforms, and companies that can solve different
+        problems while sharing one larger vision.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         STATUS
+    ========================== -->
+
+    <section class="venture-status">
+
+      <div class="status-grid">
+
+        <div class="status-item">
+
+          <span class="status-dot"></span>
+
+          <div>
+            <strong>02</strong>
+            <span>ACTIVE INITIATIVES</span>
+          </div>
+
+        </div>
+
+
+        <div class="status-item">
+
+          <span class="status-dot"></span>
+
+          <div>
+            <strong>01</strong>
+            <span>ECOSYSTEM</span>
+          </div>
+
+        </div>
+
+
+        <div class="status-item">
+
+          <span class="status-dot"></span>
+
+          <div>
+            <strong>∞</strong>
+            <span>IDEAS IN MOTION</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACTIVE VENTURES
+    ========================== -->
+
+    <section class="ventures-section">
+
+      <div class="ventures-heading">
+
+        <div class="section-label">
+          <span>02</span>
+          ACTIVE VENTURES
+        </div>
+
+        <h2>
+          Built today.
+          <span>Growing tomorrow.</span>
+        </h2>
+
+        <p>
+          These are the projects currently forming the foundation
+          of the Meisophant ecosystem.
+        </p>
+
+      </div>
+
+
+      <!-- PROCULOCAL -->
+
+      <article class="main-venture">
+
+        <div class="main-venture-info">
+
+          <div>
+
+            <div class="venture-meta">
+
+              <span class="venture-index">
+                VENTURE 01
+              </span>
+
+              <span class="venture-state">
+                LIVE
+              </span>
+
+            </div>
+
+            <h3>
+              Procu<span>Local</span>
+            </h3>
+
+            <p class="main-venture-description">
+              A procurement platform designed to connect businesses
+              with vendors and procurement opportunities, creating a
+              simpler way to discover and participate in business
+              sourcing.
+            </p>
+
+            <div class="venture-features">
+
+              <span class="venture-feature">
+                PROCUREMENT
+              </span>
+
+              <span class="venture-feature">
+                MARKETPLACE
+              </span>
+
+              <span class="venture-feature">
+                BUSINESS
+              </span>
+
+              <span class="venture-feature">
+                VENDOR NETWORK
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="venture-action">
+
+            <a
+              href="https://proculocal.name.ng/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              Visit ProcuLocal
+              <span>↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="venture-visual">
+
+          <div class="visual-grid"></div>
+
+          <div class="visual-orb"></div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TEKSPOT -->
+
+      <div class="secondary-grid">
+
+        <article class="secondary-card">
+
+          <div>
+
+            <div class="venture-index">
+              VENTURE 02 · LIVE
+            </div>
+
+            <h3>
+              Tek<span>Spot</span>
+            </h3>
+
+            <p>
+              A technology learning initiative focused on making
+              coding and technology education more accessible.
+            </p>
+
+          </div>
+
+          <div>
+
+            <a
+              href="https://tekspot.meisophant.name.ng/"
+              target="_blank"
+              rel="noopener"
+            >
+              Explore TekSpot ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="secondary-card">
+
+          <div>
+
+            <div class="venture-index">
+              VENTURE 03 · IN DEVELOPMENT
+            </div>
+
+            <h3>
+              The next
+              <span>idea.</span>
+            </h3>
+
+            <p>
+              Meisophant is continuously exploring new problems,
+              technologies, and opportunities that could become
+              future products or companies.
+            </p>
+
+          </div>
+
+          <div>
+
+            <span class="venture-feature">
+              MORE TO COME
+            </span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FUTURE PIPELINE
+    ========================== -->
+
+    <section class="pipeline-section">
+
+      <div class="pipeline-header">
+
+        <div class="section-label">
+          <span>03</span>
+          FUTURE PIPELINE
+        </div>
+
+        <h2>
+          Not everything
+          <span>starts today.</span>
+        </h2>
+
+        <p>
+          Some ideas require more research, resources, partnerships,
+          and infrastructure before they can become real products.
+          We believe in being transparent about that journey.
+        </p>
+
+      </div>
+
+
+      <div class="pipeline-list">
+
+        <div class="pipeline-item">
+
+          <div class="pipeline-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>Future Technology</h3>
+
+            <p>
+              Exploring ambitious technology products and platforms.
+            </p>
+
+          </div>
+
+          <span class="pipeline-status">
+            EXPLORING
+          </span>
+
+        </div>
+
+
+        <div class="pipeline-item">
+
+          <div class="pipeline-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>Emerging Hardware</h3>
+
+            <p>
+              Research into technology that combines hardware,
+              software, and intelligent systems.
+            </p>
+
+          </div>
+
+          <span class="pipeline-status">
+            RESEARCH
+          </span>
+
+        </div>
+
+
+        <div class="pipeline-item">
+
+          <div class="pipeline-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>Technology Infrastructure</h3>
+
+            <p>
+              Long-term ideas for building scalable technology
+              infrastructure.
+            </p>
+
+          </div>
+
+          <span class="pipeline-status">
+            LONG TERM
+          </span>
+
+        </div>
+
+
+        <div class="pipeline-item">
+
+          <div class="pipeline-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>New Companies</h3>
+
+            <p>
+              Future projects that may eventually grow into
+              independent Meisophant companies.
+            </p>
+
+          </div>
+
+          <span class="pipeline-status">
+            FUTURE
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="ventures-cta">
+
+      <div class="ventures-cta-box">
+
+        <div class="section-label">
+          <span>04</span>
+          BE PART OF THE JOURNEY
+        </div>
+
+        <h2>
+          The ecosystem is
+          <span>only beginning.</span>
+        </h2>
+
+        <p>
+          We're building the foundation for products, companies,
+          and technologies that can grow far beyond where they
+          begin.
+        </p>
+
+        <a href="./contact/" class="btn btn-primary">
+          Partner With Us
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a href="../" class="brand">
+          <span class="brand-mark">M</span>
+          <span class="brand-name">MEISOPHANT</span>
+        </a>
+
+        <p>
+          Where Creativity Meets Code.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="./about/">About</a>
+        <a href="./ventures/">Ventures</a>
+        <a href="./impact/">Impact</a>
+        <a href="./vision/">Vision</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Meisophant. All rights reserved.
+      </span>
+
+      <span>
+        A MEISOPHANT COMPANY
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
+```
